@@ -1,0 +1,20 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "writeonly",
+            "Effect": "Allow",
+            "Action": [
+                "secretsmanager:RestoreSecret",
+                "secretsmanager:PutSecretValue",
+                "secretsmanager:CreateSecret",
+                "secretsmanager:UpdateSecretVersionStage",
+                "secretsmanager:DeleteSecret",
+                "secretsmanager:RotateSecret",
+                "secretsmanager:CancelRotateSecret",
+                "secretsmanager:UpdateSecret"
+            ],
+            "Resource": "arn:aws:secretsmanager:<REGION>:<ACCOUNT-ID>:secret:*"
+        }
+    ]
+}

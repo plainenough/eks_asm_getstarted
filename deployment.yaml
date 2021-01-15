@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: readsecrets
+spec:
+    containers:
+        - name: secrets-container
+          image: <INSERT IMAGE NAME>
+          imagePullPolicy: Always
+          env:
+              - name: secretslist
+                value: '["<secretname1>", "<secretname2>"]'
